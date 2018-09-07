@@ -47,20 +47,34 @@
 var listFavorites=calc.selectCurrence(currency, "BTC");
 //var listFavorites=calc.selectCurrence(currency, "RUB");
 
-console.log(listFavorites);
-/*       var nameCurrence="_RUB";
-       var keys = Object.keys(currency);
-        var regexp = new RegExp(nameCurrence, "");
-        var listCurrence={};
-        for (var i=0; i<keys.length; i++){
-            if(~keys[i].search(regexp)){
-                //console.log('keys['+i+']='+keys[i]);
-                //console.log(keys[i].search(regexp));
-                listCurrence[keys[i]]=currency[keys[i]];
-            }   
+//console.log(listFavorites);
+/*for (var key in listFavorites){
+    //console.log(listFavorites[key]);
+    console.log(listFavorites[key]['vol_curr']);
+    console.log('-----');
+}*/
+
+describe("calc.compareNumeric(a, b)", function() { 
+console.log(calc.selectCurrence);
+console.log(calc.compareNumeric);
+
+
+    var a1={"a1_BTC":{"buy_price":"7225","sell_price":"7250.9","last_trade":"7250.9","high":"7350","low":"7180.00000001","avg":"7260.89603285","vol":"1083.29359888","vol_curr":"7854853.55619129","updated":1535968848}};
+
+    var a2={"a2_BTC":{"buy_price":"7225","sell_price":"7250.9","last_trade":"7250.9","high":"7350","low":"7180.00000001","avg":"7260.89603285","vol":"1083.29359888","vol_curr":"78548","updated":1535968848}};
+
+    var a3={"a2_BTC":{"buy_price":"7225","sell_price":"7250.9","last_trade":"7250.9","high":"7350","low":"7180.00000001","avg":"7260.89603285","vol":"1083.29359888","vol_curr":"78","updated":1535968848}};
+  
+    it("calc.compareNumeric(a1, a2)==1", function() {
+      assert.equal(calc.compareNumeric(a1, a2), 1); 
+    });
+
+    it("calc.compareNumeric(a2, a1)==-1", function() {
+      assert.equal(calc.compareNumeric(a1, a2), -1); 
+    });
  
-        }
-        console.log(listCurrence);*/
+})  
+
 
 
 describe("var str1=new calc.Inquiry();", function() { 
@@ -68,13 +82,10 @@ describe("var str1=new calc.Inquiry();", function() {
   var str1=new calc.Inquiry();
   //str1.string="348+78*56-67*45-445/5";    
       it("str1.selectCurrence(currency) =", function() {
-        assert.equal(str1.selectCurrence(currency), 'unde'); 
-      
+        assert.equal(str1.selectCurrence(currency), 'unde');     
       
       });
 
- 
- 
  
 })
 

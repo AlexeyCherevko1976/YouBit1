@@ -26,19 +26,31 @@
        var keys = Object.keys(list);
         var regexp = new RegExp(nameCurrence, "");
         var listCurrence={};
-        keys.forEach(item => (~item.search(regexp) ? listCurrence[item]=list[item]: true)); 
- console.log(keys);
-function compareNumeric(a, b) {
-  if (a['vol_curr'] > b['vol_curr']) return 1;
-  if (a['vol_curr'] < b['vol_curr']) return -1;
-}
-keys.sort(compareNumeric);
+        //keys.forEach(item => (~item.search(regexp) ? listCurrence[item]=list[item]: true)); 
+        var keysSelect=[];
+       keys.forEach(item => (~item.search(regexp) ? keysSelect.push(item): true));        
+          
+        keysSelect.sort(compareNumeric);
+        keysSelect.forEach(item =>listCurrence[item]=list[item]); 
+
+        //console.log(keysSelect);
 
 
         return listCurrence
   }
+
+function compareNumeric(a, b) {
+  if (a['vol_curr'] > b['vol_curr']) return 1;
+  if (a['vol_curr'] < b['vol_curr']) return -1;
+}
+/*function compareNumeric(a, b) {
+  if (a['vol_curr'] > b['vol_curr']) return 1;
+  if (a['vol_curr'] < b['vol_curr']) return -1;
+}*/
+
  
- calc.selectCurrence=selectCurrence;
+calc.selectCurrence=selectCurrence;
+calc.compareNumeric=compareNumeric;
 
   calc.Inquiry=Inquiry;
 
