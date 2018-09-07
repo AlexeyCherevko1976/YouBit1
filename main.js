@@ -21,17 +21,35 @@
   }
 
   function selectCurrence(list, nameCurrence){
-        var keys = Object.keys(list);
-        var regexp = new RegExp("_"+nameCurrence, "");
+       //var nameCurrence="_RUB";
+       nameCurrence="_"+nameCurrence;
+       var keys = Object.keys(list);
+        var regexp = new RegExp(nameCurrence, "");
         var listCurrence={};
-        for (var i=0; i<keys.length; i++){
-          console.log(~keys[i].search(regexp));
-            if (~keys[i].search(regexp)){continue};
-            //listCurrence[keys[i]]=list[keys[i]];
-            console.log(keys.length);
-            console.log(keys[i]);
-        }
-        return keys
+        keys.forEach(item => (~item.search(regexp) ? listCurrence[item]=list[item] : true)); 
+            
+        
+        /*        keys.forEach(item => {
+            if(~item.search(regexp)){
+                listCurrence[item]=list[item];
+            }
+        });  */      
+/*        keys.forEach(function(item, i, arr) {
+            if(~item.search(regexp)){
+                listCurrence[item]=list[item];
+            }
+        });
+ */       
+   //     for (var i=0; i<keys.length; i++){
+  /*          if(~keys[i].search(regexp)){
+                //console.log('keys['+i+']='+keys[i]);
+                //console.log(keys[i].search(regexp));
+                listCurrence[keys[i]]=list[keys[i]];
+            }   */
+ 
+     //   }
+        //console.log(listCurrence);
+        return listCurrence
   }
  
  calc.selectCurrence=selectCurrence;
