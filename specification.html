@@ -54,24 +54,31 @@ var listFavorites=calc.selectCurrence(currency, "BTC");
     console.log('-----');
 }*/
 
-describe("calc.compareNumeric(a, b)", function() { 
-console.log(calc.selectCurrence);
-console.log(calc.compareNumeric);
+describe("compareNumeric(a, b)", function() { 
+function compareNumeric(a, b) {
+  if (a[1] > b[1]) return 1;
+  if (a[1] < b[1]) return -1;
+}
 
+var a1=[
+["GNT_BTC", "0.10630066"],
+["DXT_BTC", "0.75045131"],
+["ZRX_BTC", "0.1723919"],
+["OMG_BTC", "0.68172456"],
+["GAS_BTC", "0.27221013"]
+]
 
-    var a1={"a1_BTC":{"buy_price":"7225","sell_price":"7250.9","last_trade":"7250.9","high":"7350","low":"7180.00000001","avg":"7260.89603285","vol":"1083.29359888","vol_curr":"7854853.55619129","updated":1535968848}};
-
-    var a2={"a2_BTC":{"buy_price":"7225","sell_price":"7250.9","last_trade":"7250.9","high":"7350","low":"7180.00000001","avg":"7260.89603285","vol":"1083.29359888","vol_curr":"78548","updated":1535968848}};
-
-    var a3={"a2_BTC":{"buy_price":"7225","sell_price":"7250.9","last_trade":"7250.9","high":"7350","low":"7180.00000001","avg":"7260.89603285","vol":"1083.29359888","vol_curr":"78","updated":1535968848}};
   
-    it("calc.compareNumeric(a1, a2)==1", function() {
-      assert.equal(calc.compareNumeric(a1, a2), 1); 
+    it("compareNumeric(a1[0], a1[1])==-1", function() {
+      assert.equal(compareNumeric(a1[0], a1[1]), -1); 
     });
 
-    it("calc.compareNumeric(a2, a1)==-1", function() {
-      assert.equal(calc.compareNumeric(a1, a2), -1); 
+    it("compareNumeric(a1[1], a1[0])==1", function() {
+      assert.equal(compareNumeric(a1[1], a1[0]), 1); 
     });
+ 
+ a1.sort(compareNumeric);
+ console.log(a1);
  
 })  
 

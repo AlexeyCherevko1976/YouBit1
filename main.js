@@ -28,21 +28,22 @@
         var listCurrence={};
         //keys.forEach(item => (~item.search(regexp) ? listCurrence[item]=list[item]: true)); 
         var keysSelect=[];
-       keys.forEach(item => (~item.search(regexp) ? keysSelect.push(item): true));        
-          
+       keys.forEach(item => (~item.search(regexp) ? keysSelect.push([item, list[item]['vol_curr']]): true));        
+        console.log(keysSelect);          
         keysSelect.sort(compareNumeric);
+        console.log(keysSelect); 
         keysSelect.forEach(item =>listCurrence[item]=list[item]); 
 
         //console.log(keysSelect);
-
+function compareNumeric(a, b) {
+  if (+a[1] > +b[1]) return 1;
+  if (a[1] < +b[1]) return -1;
+}
 
         return listCurrence
   }
 
-function compareNumeric(a, b) {
-  if (a['vol_curr'] > b['vol_curr']) return 1;
-  if (a['vol_curr'] < b['vol_curr']) return -1;
-}
+
 /*function compareNumeric(a, b) {
   if (a['vol_curr'] > b['vol_curr']) return 1;
   if (a['vol_curr'] < b['vol_curr']) return -1;
@@ -50,7 +51,7 @@ function compareNumeric(a, b) {
 
  
 calc.selectCurrence=selectCurrence;
-calc.compareNumeric=compareNumeric;
+
 
   calc.Inquiry=Inquiry;
 
