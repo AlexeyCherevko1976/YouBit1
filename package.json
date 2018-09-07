@@ -1,21 +1,17 @@
 {
-  "name": "nodejs-restapi",
+  "name": "addUsers",
   "version": "1.0.0",
-  "description": "Simple Example of nodejs to create rest call using MySQL",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start":"node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": {
-    "name": "Alexey Cherevko",
-    "email": "cherevkoalexey1976@mail.ru"
-  },
-  "license": "MIT",
+  "author": "AlexeyCherevko1976",
+  "license": "",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "mysql": "^2.15.0",
     "fs": "0.0.1-security"
   }
 }

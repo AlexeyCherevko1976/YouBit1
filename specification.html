@@ -23,10 +23,12 @@
 <!-- <script src="main.js"></script> -->
   <script src="main.js">
     
+  
     function square(number) {
     return number*number;
   }
   </script>
+  <script src="baseSpecification.txt"></script>
   
 <body bgcolor="#EDEDED" text="#000000" link="#000000" topmargin="0" leftmargin="0">
 
@@ -36,79 +38,39 @@
   <!-- в этом скрипте находятся спеки -->
 <script>
 // C:\Users\Алексей\Desktop\работа\Interpretator - исходник
+// for (var key in currency){
+//     console.log(key);
+//     console.log(currency[key]);
+//     console.log('');
+// }
 
-describe("stringExpession(name)", function() { 
+//var listFavorites=calc.selectCurrence(currency, "BTC");
+       var nameCurrence="_RUB";
+       var keys = Object.keys(currency);
+        var regexp = new RegExp(nameCurrence, "");
+        var listCurrence={};
+        for (var i=0; i<keys.length; i++){
+            if(~keys[i].search(regexp)){
+                //console.log('keys['+i+']='+keys[i]);
+                //console.log(keys[i].search(regexp));
+                listCurrence[keys[i]]=currency[keys[i]];
+            }   
+ 
+        }
+        console.log(listCurrence);
 
-  var str1=new calc.stringExpession("str1");
-  str1.string="348+78*56-67*45-445/5";    
-      it("str1.string='348+78*56-67*45-445/5'", function() {
-        assert.equal(str1.name, "str1"); 
-        assert.equal(str1.string, "348+78*56-67*45-445/5"); 
-        str1.countSimple();
-        assert.equal(str1.string, "348+78*56-67*45-445/5=1612"); 
+
+describe("var str1=new calc.Inquiry();", function() { 
+
+  var str1=new calc.Inquiry();
+  //str1.string="348+78*56-67*45-445/5";    
+      it("str1.selectCurrence(currency) =", function() {
+        assert.equal(str1.selectCurrence(currency), 'unde'); 
+      
       
       });
 
-  var str2=new calc.stringExpession("str2");
-  str2.string="Math.sin(0.5)+8*Math.sin(0.3)";    
-      it("str2.name=='str2' str2.string='Math.sin(0.5)+8*Math.sin(0.3)'", function() {
-        assert.equal(str2.name, "str2"); 
-        assert.equal(str2.string, "Math.sin(0.5)+8*Math.sin(0.3)");
-        str2.countSimple();
-        assert.equal(str2.string, "Math.sin(0.5)+8*Math.sin(0.3)=2.8435871918949194"); 
-         
-      });
  
-  var str3=new calc.stringExpession("str3");
-  str3.string="sin(0.5)+8*sin(0.3)";    
-      it("str3.name=='str2' str3.string='sin(0.5)+8*sin(0.3)'", function() {
-        assert.equal(str3.name, "str3"); 
-        assert.equal(str3.string, "sin(0.5)+8*sin(0.3)");
-        str3.countSimple();
-        assert.equal(str3.string, "sin(0.5)+8*sin(0.3)=2.8435871918949194"); 
-         
-      });
-
-    var str4=new calc.stringExpession("str4");
-  str4.string="cos(0.5)+8*cos(0.3)";    
-      it("str4.name=='str2' str4.string='cos(0.5)+8*cos(0.3)'", function() {
-        assert.equal(str4.name, "str4"); 
-        assert.equal(str4.string, "cos(0.5)+8*cos(0.3)");
-        str4.countSimple();
-        assert.equal(str4.string, "cos(0.5)+8*cos(0.3)=8.52027447489522"); 
-         
-      });
-
-  var str5=new calc.stringExpession("str5");
-  str5.string="tan(0.5)+8*tan(0.3)";    
-      it("str5.name=='str2' str5.string='tan(0.5)+8*tan(0.3)'", function() {
-        assert.equal(str5.name, "str5"); 
-        assert.equal(str5.string, "tan(0.5)+8*tan(0.3)");
-        str5.countSimple();
-        assert.equal(str5.string, "tan(0.5)+8*tan(0.3)=3.0209924867207762"); 
-         
-      });
- 
-  var str6=new calc.stringExpession("str6");
-  //console.log('asin='+(Math.asin(0.5)+8*Math.asin(0.3)))
-  str6.string="asin(0.5)+8*asin(0.3)+acos(0.5)+8*acos(0.3)+atan(0.5)+8*atan(0.3)";    
-      it("str6.name=='str6' str6.string='asin(0.5)+8*asin(0.3)+acos(0.5)+8*acos(0.3)+atan(0.5)+8*atan(0.3)'", function() {
-        assert.equal(str6.name, "str6"); 
-        assert.equal(str6.string, "asin(0.5)+8*asin(0.3)+acos(0.5)+8*acos(0.3)+atan(0.5)+8*atan(0.3)");
-        str6.countSimple();
-        assert.equal(str6.string, "asin(0.5)+8*asin(0.3)+acos(0.5)+8*acos(0.3)+atan(0.5)+8*atan(0.3)=16.932468905977814"); 
-         
-      });
-
-    var str7=new calc.stringExpession("str7");
-  str7.string="pow(4, 2)+log(exp(2))+sqrt(4)";    
-      it("str7.name=='str7' str7.string='pow(4, 2)+log(exp(2))+sqrt(4)'", function() {
-        assert.equal(str7.name, "str7"); 
-        assert.equal(str7.string, "pow(4, 2)+log(exp(2))+sqrt(4)");
-        str7.countSimple();
-        assert.equal(str7.string, "pow(4, 2)+log(exp(2))+sqrt(4)=20"); 
-         
-      });
  
  
 })
