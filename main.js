@@ -37,18 +37,22 @@
         //console.log(keysSelect);
 function compareNumeric(a, b) {
   if (+a[1] > +b[1]) return 1;
-  if (a[1] < +b[1]) return -1;
+  if (+a[1] < +b[1]) return -1;
 }
 
         return listCurrence
   }
 
 
-/*function compareNumeric(a, b) {
-  if (a['vol_curr'] > b['vol_curr']) return 1;
-  if (a['vol_curr'] < b['vol_curr']) return -1;
-}*/
-
+function post1(namePost){
+    var request = require('request');
+    request(namePost, function (error, response, body) {
+    //console.log('error:', error); // Print the error if one occurred
+    //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+    console.log('body:', body); // Print the HTML for the Google homepage.
+});
+}
+calc.post1=post1;
  
 calc.selectCurrence=selectCurrence;
 

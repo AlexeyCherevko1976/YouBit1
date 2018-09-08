@@ -3,6 +3,8 @@ var bodyParser = require("body-parser");
 var fs = require("fs");
 var main=require('./main');
 var calc=main.calc;
+
+calc.post1('https://api.exmo.com/v1/ticker/');
  
 var app = express();
 var jsonParser = bodyParser.json();
