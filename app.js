@@ -13,16 +13,15 @@ app.get("/api/base", function(req, res){
     var content = fs.readFileSync("base.txt", "utf8");
     var users = JSON.parse(content);
     var a1=new calc.Inquiry();
-    a1.ticker=10;
-    a1.selectLagestTicker();
-    console.log('a1.lagestTicker='+a1.lagestTicker)
-/*    for (var str in users){
+    var a2=calc.selectCurrence(users, "BTC");
+    for (var str in a2){
         console.log(str);
         console.log(users[str]);
         console.log("");
-    }*/
+    }
 
     res.send(users.BTC_USD);
+    //res.send(a2);
 });
 // получение списка данных
 app.get("/api/users", function(req, res){

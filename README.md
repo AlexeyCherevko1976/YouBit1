@@ -1,4 +1,6 @@
-Adding dictionary pair. Example of using the technology mysql / express.js
+Не готовый проект! В разработке
+Not a ready project! In developing
+
 
 1. Go to the working directory at the command line.
 2. >node app.js

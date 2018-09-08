@@ -64,6 +64,6 @@ calc.selectCurrence=selectCurrence;
   // calc.cloneDeep = ...
 
   // "экспортировать" calc наружу из модуля
-  window.calc = calc; // в оригинальном коде здесь сложнее, но смысл тот же
-  //module.exports.calc=calc;
+  //window.calc = calc; // в оригинальном коде здесь сложнее, но смысл тот же
+  module.exports.calc=calc;
 }());
