@@ -4,8 +4,18 @@ var fs = require("fs");
 var main=require('./main');
 var calc=main.calc;
 
-calc.post1('https://api.exmo.com/v1/ticker/');
- 
+//var a3=calc.post1('https://api.exmo.com/v1/ticker/'); console.log(a3);
+//fs.createReadStream('file.json').pipe(request.put('http://mysite.com/obj.json'))
+// var r = request.post('https://api.exmo.com/v1/ticker/', function optionalCallback(err, httpResponse, body) {}); console.log(r);
+var request = require('request'); 
+request('https://api.exmo.com/v1/ticker/').pipe(fs.createWriteStream('ticker.txt'))
+    var content = fs.readFileSync("base.txt", "utf8");
+    var users = JSON.parse(content);
+    for (var key in users){
+         console.log(users[key]['vol']);
+    }
+    //console.log(users);
+
 var app = express();
 var jsonParser = bodyParser.json();
  

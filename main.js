@@ -46,11 +46,20 @@ function compareNumeric(a, b) {
 
 function post1(namePost){
     var request = require('request');
+    var answer=undefined;
     request(namePost, function (error, response, body) {
     //console.log('error:', error); // Print the error if one occurred
     //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-    console.log('body:', body); // Print the HTML for the Google homepage.
+    //console.log('body:', body); // Print the HTML for the Google homepage.
+ /*       var parse=JSON.parse(r);
+       for (var key in parse){
+        console.log(parse[key]['vol']);
+       }*/
 });
+    
+       console.log(r);
+
+    return answer
 }
 calc.post1=post1;
  
