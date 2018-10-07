@@ -24,6 +24,7 @@ const exmo = require("exmo-api");
        exmo.init_exmo({key:apiKey, secret:apiSecret});
        this.currency1='TRX'; // покупаемая валюта
        this.currency2='RUB'; // продаваемая валюта
+       this.currentPair='TRX_RUB'; // название торговой пары
        this.currency1MinQuantity = 0.001; // минимальный объем покупаемой валюты
        this.orderLifeTime = 3; // (мин) через этот период ордер на на покупку currency1 будет отменен
            this.balancesCurrency1=undefined;
@@ -39,15 +40,39 @@ const exmo = require("exmo-api");
            var content = JSON.parse(fs.readFileSync("t1.txt", "utf8"));
            console.log(content);
            
-           this.balancesCurrency1=content['balances'][this.currency1];
+/*           this.balancesCurrency1=content['balances'][this.currency1];
            this.balancesCurrency2=content['balances'][this.currency2];
            this.reservedCurrency1=content['reserved'][this.currency1];
            this.reservedCurrency2=content['reserved'][this.currency2];
-      
+      */
        }
-       
+       this.user_open_orders=function(){
+            exmo.api_query("user_open_orders", { }, result => {
 
-  }
+                let res = JSON.parse(result); console.log(res);
+                var currentPair=this.currentPair;
+
+                if(res[currentPair] == undefined) console.log('Открытых оредеров нет');
+
+                let buyOrders = [];
+
+                for(let i in res[currentPair]){
+                    console.log(res[currentPair][i]);
+                    if(res[currentPair][i].type == 'sell'){
+                       console.log('Выход, ждем пока не исполнятся/закроются все ордера на продажу');
+                    }else{
+                      buyOrders.push(res[currentPair][i]);
+                    }
+                } 
+                //console.log('buyOrders');
+                //console.log(buyOrders);            
+           })
+     
+        }
+        this.user=function(){
+           //
+        }
+}
 
 function analyzing(propertyOne, propertyTwo){
     //

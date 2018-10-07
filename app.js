@@ -9,11 +9,16 @@ var calc=main.calc;
 
 var trx_rub=new calc.CurrentPair;
 console.log(trx_rub.currency1);
-trx_rub.user_info();
-console.log(trx_rub.balancesCurrency1);
-console.log(trx_rub.balancesCurrency2);
-console.log(trx_rub.reservedCurrency1);
-console.log(trx_rub.reservedCurrency2);
+trx_rub.user_info(); consoleUserInfo();
+
+//trx_rub.user_open_orders();
+
+function consoleUserInfo(){
+    console.log(trx_rub.balancesCurrency1);
+    console.log(trx_rub.balancesCurrency2);
+    console.log(trx_rub.reservedCurrency1);
+    console.log(trx_rub.reservedCurrency2);    
+}
  
 var app = express();
 var jsonParser = bodyParser.json();
