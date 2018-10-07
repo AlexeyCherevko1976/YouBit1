@@ -4,18 +4,17 @@ var fs = require("fs");
 var main=require('./main');
 var calc=main.calc;
 
-//var a3=calc.post1('https://api.exmo.com/v1/ticker/'); console.log(a3);
-//fs.createReadStream('file.json').pipe(request.put('http://mysite.com/obj.json'))
-// var r = request.post('https://api.exmo.com/v1/ticker/', function optionalCallback(err, httpResponse, body) {}); console.log(r);
-var request = require('request'); 
-request('https://api.exmo.com/v1/ticker/').pipe(fs.createWriteStream('ticker.txt'))
-    var content = fs.readFileSync("base.txt", "utf8");
-    var users = JSON.parse(content);
-    for (var key in users){
-         console.log(users[key]['vol']);
-    }
-    //console.log(users);
+//calc.post1('https://api.exmo.com/v1/ticker/');
+//var p1=calc.post1(); console.log(p1);
 
+var trx_rub=new calc.CurrentPair;
+console.log(trx_rub.currency1);
+trx_rub.user_info();
+console.log(trx_rub.balancesCurrency1);
+console.log(trx_rub.balancesCurrency2);
+console.log(trx_rub.reservedCurrency1);
+console.log(trx_rub.reservedCurrency2);
+ 
 var app = express();
 var jsonParser = bodyParser.json();
  
@@ -26,6 +25,7 @@ app.get("/api/base", function(req, res){
     var users = JSON.parse(content);
     var a1=new calc.Inquiry();
     var a2=calc.selectCurrence(users, "BTC");
+
     for (var str in a2){
         console.log(str);
         console.log(users[str]);

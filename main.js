@@ -1,3 +1,12 @@
+var CryptoJS = require("crypto-js")
+    http = require('http'),
+    querystring = require('querystring'),
+    request = require('request');
+var express = require("express");
+var bodyParser = require("body-parser");
+var fs = require("fs");
+const exmo = require("exmo-api");
+
 ;(function() {
 
   // calc - основная функция для библиотеки
@@ -9,64 +18,67 @@
   var version = '1.1.1';   //
   // ... другие вспомогательные переменные и функции
 
-  function Inquiry(){
-       this.ticker='unde';
-       this.lagestTicker=undefined;
-       this.selectCurrence=function(nameSelectCurrence){
-           var keys = Object.keys(user);
+  function CurrentPair(){
+       const apiKey = 'K-c9edfb10cd6eaccaa434c3e0ae8c17f258b9c7fe';
+       const apiSecret = 'S-732aa903fd2946816f9ef622faacb6dd5fefd7c0';
+       exmo.init_exmo({key:apiKey, secret:apiSecret});
+       this.currency1='TRX'; // покупаемая валюта
+       this.currency2='RUB'; // продаваемая валюта
+       this.currency1MinQuantity = 0.001; // минимальный объем покупаемой валюты
+       this.orderLifeTime = 3; // (мин) через этот период ордер на на покупку currency1 будет отменен
+           this.balancesCurrency1=undefined;
+           this.balancesCurrency2=undefined;
+           this.reservedCurrency1=undefined;
+           this.reservedCurrency2=undefined;
+  
+       this.user_info=function(){
 
-           alert( keys ); // name, age
+          exmo.api_query("user_info", { }, result => (
+              fs.writeFile('t1.txt', result, (err) => { if (err) {console.error(err); return} }) //файл записан успешно
+            ));
+           var content = JSON.parse(fs.readFileSync("t1.txt", "utf8"));
+           console.log(content);
+           
+           this.balancesCurrency1=content['balances'][this.currency1];
+           this.balancesCurrency2=content['balances'][this.currency2];
+           this.reservedCurrency1=content['reserved'][this.currency1];
+           this.reservedCurrency2=content['reserved'][this.currency2];
+      
        }
+       
 
   }
 
+function analyzing(propertyOne, propertyTwo){
+    //
+}
+
+function post1(){
+    var request = require('request');
+    var fs = require("fs"); 
+    request('https://api.exmo.com/v1/ticker/').pipe(fs.createWriteStream('ticker.txt'))
+    var content = fs.readFileSync("base.txt", "utf8");
+    var users = JSON.parse(content);
+    var users2=selectCurrence(users, "RUB");
+
+    return users2
+}
+calc.post1=post1;
+
   function selectCurrence(list, nameCurrence){
-       //var nameCurrence="_RUB";
-       nameCurrence="_"+nameCurrence;
+      nameCurrence="_"+nameCurrence;
        var keys = Object.keys(list);
         var regexp = new RegExp(nameCurrence, "");
         var listCurrence={};
-        //keys.forEach(item => (~item.search(regexp) ? listCurrence[item]=list[item]: true)); 
         var keysSelect=[];
        keys.forEach(item => (~item.search(regexp) ? keysSelect.push([item, list[item]['vol_curr']]): true));        
-        console.log(keysSelect);          
-        keysSelect.sort(compareNumeric);
-        console.log(keysSelect); 
-        keysSelect.forEach(item =>listCurrence[item]=list[item]); 
+      keysSelect.sort((a,b)=>(+a[1] > +b[1]? 1: -1));         
 
-        //console.log(keysSelect);
-function compareNumeric(a, b) {
-  if (+a[1] > +b[1]) return 1;
-  if (+a[1] < +b[1]) return -1;
-}
 
-        return listCurrence
+        return keysSelect
   }
-
-
-function post1(namePost){
-    var request = require('request');
-    var answer=undefined;
-    request(namePost, function (error, response, body) {
-    //console.log('error:', error); // Print the error if one occurred
-    //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-    //console.log('body:', body); // Print the HTML for the Google homepage.
- /*       var parse=JSON.parse(r);
-       for (var key in parse){
-        console.log(parse[key]['vol']);
-       }*/
-});
-    
-       console.log(r);
-
-    return answer
-}
-calc.post1=post1;
- 
 calc.selectCurrence=selectCurrence;
-
-
-  calc.Inquiry=Inquiry;
+calc.CurrentPair=CurrentPair;
 
 
 

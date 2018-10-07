@@ -1,0 +1,536 @@
+https://yobit.net/api/3/ticker/liza_rur
+{"liza_rur":{"high":4.9999997,"low":3.36,"avg":4.17999985,"vol":85475157.2096215,"vol_cur":21054564.85622266,"last":3.98,"buy":3.97999996,"sell":3.98000000,"updated":1518756159}}
+
+https://yobit.net/api/3/info
+
+{"server_time":1518757961,"pairs":{"ltc_btc":{"decimal_places":8,"min_price":0.00000001,"max_price":10000,"min_amount":0.0001,"min_total":0.0001,"hidden":0,"fee":0.2,"fee_buyer":0.2,"fee_seller":0.2},"nmc_btc":{"decimal_places":8,"min_price":0.00000001,"max_price":10000,"min_amount":0.0001,"min_total":0.0001,"hidden":0,"fee":0.2,"fee_buyer":0.2,"fee_seller":0.2},"ppc_btc":{"decimal_places":8,"min_price":0.00000001,"max_price":10000,"min_amount":0.0001,"min_total":0.0001,"hidden":0,"fee":0.2,"fee_buyer":0.2,"fee_seller":0.2},"dash_btc":
+
+
+https://yobit.net/api/2/liza_rur/depth это наверное сделки
+
+13:59 16.02.2018
+
+>>> s = [1, 2, 3, 4, 6] #простой список
+>>> s[:] #копия списка, часто очень полезно
+[1, 2, 3, 4, 6]
+>>> s[1:] # все элементы кроме первого
+[2, 3, 4, 6]
+>>> s[-3:] # последние 3 элемента
+[3, 4, 6]
+>>> s[2:-2] #откидываем первые и последние 2
+[3]
+>>> s[::2] #парные элементы
+[1, 3, 6]
+>>> s[1:4:2] #элементы с первого по четвертый с шагом 2
+[2, 4]
+
+21:28 16.02.2018
+150
+150
+[[3.73, 7310.70074265], [3.73117969, 92.86187201], [3.7443999, 1680.10474214], [3.75, 13], [3.751, 156], [3.75380189, 17.6414161], [3.7592, 1235.9950273], [3.75920001, 365.57973639], [3.75940474, 219.72604576]]
+-----------
+[[3.72008, 107.80657115], [3.72, 18.6], [3.71446459, 1.18879075], [3.71, 1347.90026954], [3.7054558, 1], [3.7021007, 1.61390743], [3.7, 114.73469331], [3.69, 60], [3.6885428, 374.74926]]
+!!!!!!!!!
+>>> 
+
+21:40 16.02.2018
+====== RESTART: C:\Users\Алексей\Desktop\работа\Python1\16001YouBit.py ======
+LOW: 3.36000000
+HIGH: 4.28400011
+AVG: 3.82200005
+VOL: 71088823.05946743
+LAST: 3.72000000
+SELL: 3.72000000
+BUY: 3.71446459
+Fri Feb 16 21:17:09 2018
+>>> 
+
+Depth: https://yobit.net/api/2/liza_rur/depth
+Ticker: https://yobit.net/api/2/liza_rur/ticker
+Trades: https://yobit.net/api/2/liza_rur/trades
+Fee: https://yobit.net/api/2/liza_rur/fee
+
+
+7:43 18.02.2018
+Запустил
+import win32com.client
+Excel = win32com.client.Dispatch("Excel.Application")
+
+Ошибки не вызвало ! Может, всего и надо было, как перезагрузить компьютер?
+10:39 18.02.2018
+https://metanit.com/python/tutorial/4.2.php
+
+вставка в ткст файл!
+
+13:31 19.02.2018
+https://yobit.io/ru/api/
+
+Info: https://yobit.net/api/3/info
+
+
+Depth: https://yobit.net/api/3/depth/ltc_btc-nmc_btc
+Ticker: https://yobit.net/api/3/ticker/ltc_btc-nmc_btc
+Trades: https://yobit.net/api/3/trades/ltc_btc-nmc_btc
+
+17:43 19.02.2018
+
+note=[];
+
+note.push(
+["btc_rur",   //  пара
+636000, //   high
+605682.65046473,  //  "low"
+"avg":620841.32523236,"vol":56496470.22722721,"vol_cur":90.81447186,"last":622434.89021956,"buy":621059.00000001,"sell":622494.89021955,"updated":1519038135
+]
+);
+
+['btc', 'liza', 'vntx', 'eth', 'lcc', 'usd', 'dft', 'etc', 'putin', 'doge', 'trx'],
+['btc', 'liza', 'vntx', 'eth', 'lcc', 'usd', 'dft', 'etc', 'putin', 'doge', 'trx'],
+['btc', 'liza', 'vntx', 'eth', 'lcc', 'usd', 'dft', 'etc', 'putin', 'doge', 'trx'],
+
+archive=[];
+archive.push
+
+
+14:07 20.02.2018
+Шаблон для записи:
+1. можно записывать для каждой валюты, можно не шифровать, записывать прямо. А многочисленные записи, уже шифровать надо. Чтобы кратко.
+model200218=[
+['btc_rur', [620841, 0, 10, 'pr'], [56496470, 0, 10, 'pr'],  [9081447, -5, 10, 'pr'], [1519038135, 0, 10, 'sm']]
+];
+
+14:27 05.03.2018
+Сегодня пока только HTML конспектирую. Мозги пока не очень варят
+http://htmlbook.ru/html/INPUT
+http://htmlbook.ru/html/attr/common
+http://htmlbook.ru/html/attr/event
+http://htmlbook.ru/samcss/vvedenie-v-css
+https://webref.ru/layout/howtocodeinhtml/chapter2
+
+
+9:20 06.03.2018
+https://habrahabr.ru/company/netologyru/blog/327294/
+10:07 06.03.2018
+http://htmlbook.ru/samcss/sposoby-dobavleniya-stiley-na-stranitsu
+10:41 06.03.2018
+https://webref.ru/layout/howtocodeinhtml/chapter12
+11:33 06.03.2018
+https://webformyself.com/vvedenie-v-angular-js/
+
+20:08 10.03.2018
+http://www.novichkoff.ru/wordpress-skachivaem-iz-interneta-i-ustanavlivaem-na-svoj-kompyuter.html
+
+17:08 14.03.2018
+https://codex.wordpress.org/Первые_шаги_с_WordPress
+https://codex.wordpress.org/Installing_WordPress
+
+10:29 28.03.2018
+https://monsterlessons.com/project/lessons/obmien-dannymi-miezhdu-kontrollierami-v-angularjs
+
+19:30 04.04.2018
+http://blog.liveedu.tv/для-начинающих-фронтенд-разработчик/ - проекты для  начинающих
+
+http://www.free-css.com/free-css-templates/page196/conquer
+проекты/templatemo_476_conquer - 1-й проект, очень красивый
+
+http://fb.ru/article/320296/preprotsessor-css-obzor-vyibor-primenenie
+%1
+
+https://webref.ru/course/sass/sass-scss-less
+%2
+
+10:05 07.04.2018
+%3  https://www.youtube.com/watch?v=XeGVFJ41zT0
+%4 https://www.youtube.com/watch?v=AQmktuQ6H5w
+5  https://www.youtube.com/watch?v=JsbCklIBE0g
+6 https://www.youtube.com/watch?v=B1SFl4KiTfg
+7 https://habrahabr.ru/company/everydaytools/blog/352878/
+8 https://github.com/BarryLiu1995/WebCalculatorDemo
+
+7:19 08.04.2018
+9 https://www.youtube.com/watch?v=SUze4C1Vt9Q
+
+19:04 12.04.2018
+госдача тулеева которую мы платим навальный
+10 https://www.youtube.com/watch?v=XaitNVj7l9Y
+
+20:49 13.04.2018
+"Большой брат"
+https://www.youtube.com/watch?v=P8u3KP-3lzM
+11 https://youtu.be/Txm0nyD7BI8
+что такое биткойн простыми словами?
+https://zema52.livejournal.com/39716.html
+
+10:40 14.04.2018
+12 http://expressjs.com/ru/starter/installing.html
+с:\Users\Алексей\Desktop\работа\test
+
+13 https://ru.stackoverflow.com/questions/547369/node-js-не-работает-запуск-из-командной-строки
+http://127.0.0.1:8080/server.js
+
+14 https://learn.javascript.ru/screencast/nodejs
+
+15 https://learn.javascript.ru/ajax-nodejs
+16 http://expressjs.com/ru/guide/routing.html Маршрутизация
+17 http://expressjs.com/ru/starter/basic-routing.html
+18 http://expressjs.com/ru/starter/hello-world.html
+18-1 http://expressjs.com/ru/starter/installing.html
+http://localhost:3000/
+
+19 https://metanit.com/web/nodejs/4.1.php
+одит ни к одному аккаунту. Пожалуйста, проверьте написание и попробуйте 
+
+Тестирование Express
+20 https://metanit.com/web/nodejs/5.3.php
+
+15:41 14.04.2018
+21 https://metanit.com/web/nodejs/1.1.php Введение в Node.js
+22 https://github.com/nodejs
+23 https://metanit.com/web/nodejs/1.2.php
+C:\Users\Алексей\Desktop\работа\test\node
+24 https://metanit.com/web/nodejs/2.1.php
+25 https://nodejs.org/api/
+26 https://metanit.com/web/nodejs/3.3.php
+
+27 https://youtu.be/ILpS4Fq3lmw
+
+подробное руководство и создание сайта
+28 https://hackerx.ru/node-js-socket-io/
+
+8:54 15.04.2018
+29 https://hackerx.ru/nodejs-events-object-eventemitter/
+30 http://internetideyka.ru/komandnaya-stroka
+31 https://hackerx.ru/what-are-websocket/
+32 https://hackerx.ru/fs-readfile-and-fs-readfilesync/
+33 https://hackerx.ru/node-js-npm-module/
+34 https://ru.stackoverflow.com/questions/662621/Как-связать-клиентскую-и-серверную-часть-в-node-js
+35 https://ru.stackoverflow.com/questions/665849/Работа-с-dom-структурой-в-node-js?rq=1
+36 https://metanit.com/web/nodejs/3.1.php
+37 https://metanit.com/web/nodejs/3.2.php
+
+21:35 20.04.2018
+38 https://metanit.com/web/nodejs/3.3.php
+39 https://metanit.com/web/nodejs/4.1.php
+40 https://metanit.com/web/nodejs/4.11.php
+
+16:51 22.04.2018
+// http://localhost:3001/index3.html
+// http://localhost:3000/public/index.html
+41 http://jquery.page2page.ru/index.php5/Ajax-запрос
+42 http://jquery.page2page.ru/index.php5/Ajax
+43 https://ruseller.com/jquery?id=17
+
+20:24 24.04.2018
+44 https://monsterlessons.com/project/lessons/http-zaprosy-v-angularjs
+19:59 25.04.2018
+45 https://shra.ru/2016/11/premudrosti-ng-repeat-v-angular/
+
+20:38 27.04.2018
+localhast:3000 
+localhast:3001/books
+localhast:3001/index.html
+22:30 29.04.2018
+46 https://www.youtube.com/watch?v=i-dl9K_payw&list=PLIcAMDxr6tpqXzsd4AO0HehPCQtIf4TgP&index=19
+
+18:07 30.04.2018
+47 #22 https://www.youtube.com/watch?v=s-hWaWUp0sw&list=PLIcAMDxr6tpqXzsd4AO0HehPCQtIf4TgP&index=22
+
+13:05 04.05.2018
+48 https://plnkr.co/edit/?p=preview
+
+13:46 06.05.2018
+49 https://www.youtube.com/watch?v=CUDgSbaYGx4 как сохранить на github
+50 https://www.youtube.com/watch?v=ttDK7nwoGnU что такое git и зачем он нужен
+51 file:///C:/Program%20Files/Git/ReleaseNotes.html после установки git выводитья этот сайт
+echo "# ssddd" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/AlexeyCherevko1976/ssddd.git
+git push -u origin master
+
+12:55 09.05.2018
+52 https://nodejs.org/api/synopsis.html
+53 C:\Users\Алексей\Desktop\работа\testMultiplication тренировать умножение.
+
+17:28 10.05.2018
+54 https://docs.angularjs.org/api/ng/directive/ngKeypress
+<input type='text' ng-model='valueReturn' ng-keypress="count = count + 1" ng-init="count=0">
+key press count: {{count}}
+
+55 http://code.i-harness.com/ru/q/118278a
+$scope.checkkey = function (event) {
+  alert(event.keyCode);  //this will show the ASCII value of the key pressed
+}
+<input type="text" ng-keypress="checkkey($event)">
+
+8:31 14.05.2018
+http://www.girlstop.info
+
+9:00 23.05.2018
+56 https://en.lyrsense.com/eurythmics/sweet_dreams_eu
+57 https://en.lyrsense.com/nightwish/sleeping_sun
+
+16:11 24.05.2018
+58 https://webformyself.com/testirovanie-angular-vvedenie-dlya-razrabotchika/
+
+10:00 28.05.2018
+59 C:\Users\Алексей\Desktop\книги\angular1
+
+9:32 01.06.2018
+60 https://jsman.ru/express/
+Для обкатки
+C:\Users\Алексей\Desktop\работа\NodeJS\60
+
+19:29 03.06.2018
+61 C:\Users\Алексей\Desktop\работа\Interpretator\словрь060618
+62 https://github.com/monsterlessons/02-angular-controllers
+   https://www.youtube.com/watch?v=aOS7cFmYkko
+63 https://docs.angularjs.org/api/ng/directive/ngBind
+
+18:19 11.06.2018
+64 https://www.youtube.com/watch?v=x2DTiziYq7g
+3 http://army.armor.kiev.ua/tactik/msr_nastup.shtml
+
+17:39 12.06.2018
+65 https://www.youtube.com/watch?v=aOS7cFmYkko
+   https://github.com/monsterlessons/02-angular-controllers
+Пишем API на NodeJS - #2 - Установка Express. Добавляем базовый роутинг.
+
+
+14:56 16.06.2018
+66 https://www.youtube.com/watch?v=18eqpKrdjdA
+
+file:///C:/Users/Алексей/Desktop/работа/Interpretator/словарь080618/Словарь.html
+C:\Users\Алексей\Desktop\работа\NodeJS\65
+
+16:05 17.06.2018
+67 https://www.youtube.com/watch?v=BmPUqg8A4PM
+68 https://www.mongodb.com/download-center?jmp=nav#community
+69 https://metanit.com/nosql/mongodb/1.2.php
+
+C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe  - MongoDB
+C:\Users\Алексей\Desktop\работа\NodeJS\65 - работа в этой папке
+
+70 https://www.mongodb.org/dl/win32/x86_64-2008plus-ssl?_ga=2.45362084.1867175031.1529226504-1278100465.1529226504 - версии mongodb
+
+71 http://drcreazy.com/art/57/mongodb-install-windows.aspx
+
+21:59 20.06.2018
+72 https://metanit.com/web/nodejs/2.1.php
+40
+C:\Users\Алексей\Desktop\работа\NodeJS\40 - работа в этой папке
+
+73 https://metanit.com/web/nodejs/2.3.php - global - глобальная переменная для node.js
+74 https://metanit.com/web/nodejs/2.6.php -nodeman
+75  
+
+19:40 25.06.2018
+76 -
+C:\Users\Алексей\Desktop\работа\NodeJS\65\node_modules\mongodb
+C:\Users\Алексей\Desktop\работа\NodeJS\65 - исходный шаблон
+40 https://metanit.com/web/nodejs/4.11.php
+
+77 - https://learn.javascript.ru/json
+
+15:11 26.06.2018
+%40, %75
+78 https://metanit.com/web/nodejs/5.1.php mocha test
+
+14:27 29.06.2018
+79 https://www.youtube.com/watch?v=i-jVyUgd7D4
+80 https://habr.com/post/231071/
+81 https://codepaper.ru/article/33
+82 https://proglib.io/p/10-important-javascript-interview-questions/
+83 https://proglib.io/p/javascript-for-dinosaurs/
+84 https://proglib.io/p/best-javascript-frameworks-2017/
+
+85 проект на базе 40
+
+86 https://habr.com/company/enterra/blog/153365/ ООП В JS
+87 http://bootstrap-ru.com/303/components/#pagination Bootstar!
+88 https://favicon.tech/5-samyh-populyarnyh-frontend-frejmvork/ самые популярные фронтэнд фреймворки в 2017 году
+
+7:47 30.06.2018
+89 index.html из 40
+90 app.js из 40
+91 https://itchief.ru/lessons/bootstrap-3/32-bootstrap-3-form формы для бутстрапа
+92 http://getbootstrap.ru/docs/v4-alpha/components/forms/ еще бутстрап
+93 http://basicweb.ru/jquery/jquery_method_ajax.php справочник аякс
+
+ 
+16:30 10.07.2018
+94 https://metanit.com/web/nodejs/5.1.php тестирование
+74 nodemon
+95 https://habr.com/company/livetex/blog/184970/  livetex
+96 http://stepansuvorov.com/blog/2012/09/node-js-работа-с-mysql/
+
+8:24 13.07.2018
+97 https://github.com/typeorm/javascript-example пример работы с базой
+98 https://help.sprinthost.ru/support/howto/services/mysql/remotedb.html как подключиться к mysql
+99 https://help.sprinthost.ru/support/howto/services/mysql/remotedb.html найти свой IT
+100 https://github.com/typeorm/typeorm  TypeORM для разных баз данных
+
+C:\Users\Алексей\Desktop\работа\NodeJS\85 0107 - работа с fs
+
+12:26 14.07.2018
+101 http://realadmin.ru/coding/onclick-js.html
+
+102 http://jquery.page2page.ru/index.php5/On обработчик событий в jquery
+103 http://basicweb.ru/jquery/jquery_events.php
+104 http://jquery.page2page.ru/index.php5/Коды_символов_и_клавиш
+$(function(){
+    $('.d22').keypress(function(eventObject){
+        if(eventObject.which==102){
+         alert('Вы ввели символ с клавиатуры. Его код равен ' + eventObject.which);
+        }
+   });
+    $('.d1').on('click', function(){
+        alert('Вы нажали на элемент "foo"');
+   });
+});
+
+17:18 15.07.2018
+105 https://learn.javascript.ru/regexp-methods regexp
+9:07 19.07.2018
+106 https://en.lyrsense.com/beatles/yesterday
+107 https://en.lyrsense.com/eurythmics/sweet_dreams_eu
+
+10:49 23.07.2018
+110 https://www.youtube.com/watch?v=kISbI4x1FoQ
+111 https://habr.com/post/322532/
+112 http://webcomme.ru/item/rukovodstvo-po-mysql-dlya-novichkov.html
+113 http://www.q2w3.ru/2011/03/07/3305/
+
+13:06 24.07.2018
+114 https://rtfm.co.ua/prostaya-rabota-s-mysql-v-prostyx-primerax/
+115 https://phpclub.ru/mysql/doc/batch-commands.html
+116 http://artemfedorov.ru/etc/mysql/field-types/
+117 http://www.spravkaweb.ru/mysql/sql/createtable 
+
+7:52 27.07.2018
+118 https://ru.wikihow.com/создать-базу-данных-в-MySQL
+119 http://artkiev.com/blog/mysql-full-list-commands.htm
+120 https://github.com/restapiexample/nodejs-restapi-using-express-mysql/blob/master/index.js
+
+18:43 29.07.2018
+121 http://kek.ksu.ru/dist/Cyrill_%20MySQL.htm
+122 https://rtfm.co.ua/mysql-commands/
+
+22:04 05.08.2018
+Здравствуйте. Готов исполнять монотонную работу. Быстро обучаюсь. Работаю сменным графиком. Готов уделять работе не менее 30 часов в неделю. Часовая ставка - 200 руб/час (на руки)
+
+https://career.ru/vacancy/26600771
+12:20 06.08.2018
+123 https://www.youtube.com/watch?v=pEjSpuMFgss Через год ты будешь жалеть, если не начал 
+124  https://www.youtube.com/watch?v=PEKN8NtBDQ0 git #1
+125 https://www.youtube.com/watch?v=9d5bJc8o7MA git #2
+    https://git-scm.com/book/ru/v1/Основы-Git-Запись-изменений-в-репозиторий
+126 https://www.youtube.com/watch?v=vFj2-bKGwkw&t=46s git  #3
+127 https://github.com/andreiled/mipt-cs-4sem/wiki/Пошаговая-инструкция-по-работе-с-git-и-github-для-студентов
+128 http://bifot.ru/delete-commit-github/ как удалить коммит
+
+8:16 07.08.2018
+129 https://ru.smedialink.com/razrabotka/web-servis-na-node-js-i-express-js-chast-2-registratsiya-i-roli-polzovatelej/
+https://github.com/volsterm/node_express_app
+
+10:10 10.08.2018
+130 https://webhamster.ru/mytetrashare/index/mtb0/1403437294p5cpqb1b39
+131 https://ru.stackoverflow.com/questions/431520/Как-вернуться-откатиться-к-более-раннему-коммиту
+
+9:10 11.08.2018
+132 https://github.com/mysqljs/mysql
+133 http://s-engineer.ru/kak-rabotat-s-mysql/#2
+134 http://qaru.site/questions/97714/how-to-add-multiple-files-to-git-at-the-same-time
+135 https://losst.ru/kak-polzovatsya-git-dlya-nachinayushhih
+
+9:52 15.08.2018
+136 https://ru.stackoverflow.com/questions/550704/Как-залить-на-github-проект-как-один-commit-вместо-сотни
+137 https://www.calculate-linux.ru/main/ru/git  Хорошая емкая информация по git
+138 https://jeka.by/ask/198/git-transfer-commit-from-another-branch-cherry-pick/
+
+10:03 21.08.2018
+139 https://learn.javascript.ru/constructor-new
+140 https://learn.javascript.ru/regexp-introduction
+13:36 24.08.2018
+141 https://habr.com/post/201922/
+142 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Error ошибки mdn
+143 https://habr.com/post/121803/
+144 https://learn.javascript.ru/call-apply
+145 https://learn.javascript.ru/exception
+
+10:17 30.08.2018
+146 Контакты ВОЕННАЯ ЧАСТЬ №68941
+Адрес: Россия Кемерово г. Кемерово, ул. Белогорская, 15 
+Телефон: (3842) 34 82 86
+147 https://bootstrap-4.ru/docs/4.1/components/forms/
+
+21:11 30.08.2018
+148 http://dev-blogs.com/git-hub-how-to-upload/ как загрузить репрозитарий
+9:40 13.09.2018
+149 https://bablofil.ru/nachinaem-torgovat-na-birge/
+150 https://bablofil.ru/o-chem-sleduet-dumat-igraya-na-birzhe/
+151 https://bablofil.ru/kak-torgovat-na-birje/
+152 https://bablofil.ru/exmo-api/
+153 https://bablofil.ru/kak-zarabativat-na-birje/
+154 https://bablofil.ru/chto-takoe-pump/
+13:55 17.09.2018
+155 https://exmo.me/ru/api/#/public_api
+156 https://dev.mysql.com/downloads/mysql/5.5.html#downloads
+
+14:46 22.09.2018
+157 https://bablofil.ru/bot-dlya-birjy-exmo/
+http://dlx3.24v.tv/VTJJiRikeZiSUYhm9XmKAA/1369/1369576/lyubitelskiy_video_intsest_mamy_s_synom.mp4?ttl=1537613526&ip=185.52.141.113
+chikaPuterWater
+plumberAVR
+158 https://wallet.advcash.com/ru/register
+chikaPuterIce
+
+http://www.girlstop.info/
+
+159 https://payeer.com/ru/account/
+
+8:45 26.09.2018
+160 https://geekbrains.ru/posts/python_packages
+161 https://exmo.me/ru/api/#/public_api   работа с api
+3ySWy7eL
+
+ https://api.exmo.com/v1/currency/  список валют
+https://api.exmo.com/v1/trades/?pair=BTC_USD,BTC_EUR  сделки
+https://api.exmo.com/v1/order_book/?pair=BTC_USD,BTC_EUR  ордера
+https://api.exmo.com/v1/ticker/  Cтатистика цен и объемов торгов по валютным парам
+https://api.exmo.com/v1/pair_settings/   Настройки валютных пар
+https://api.exmo.com/v1/currency/  Cписок валют биржи
+
+10:20 01.10.2018
+API key
+
+K-c9edfb10cd6eaccaa434c3e0ae8c17f258b9c7fe
+
+API secret
+
+S-732aa903fd2946816f9ef622faacb6dd5fefd7c0
+
+chikaPuterWater
+plumberAVR
+
+11:47 01.10.2018
+011018 11-43 - коммит C:\Users\Алексей\AppData\Local\Programs\Python\Python37-32\robot1.py
+162  https://exmo.me/ru/api
+163 https://habr.com/company/ruvds/blog/424969/
+163 github.com/exmo-dev/exmo_api_lib/tree/master/nodejs или npm install exmo-api
+164 https://www.youtube.com/watch?v=WhQ7PPrJLaE   Вы никогда не запустите проект мечты
+"TRX_RUB":{"min_quantity":"0.01","max_quantity":"10000000","min_price":"0.000001","max_price":"100000","max_amount":"1000000","min_amount":"0.1"}
+
+9:00 05.10.2018
+165 https://habr.com/post/416073/
+
+           exmo.api_query("user_info", { }, result => (
+              fs.writeFile('t1.txt', result, (err) => {
+                if (err) {
+                 console.error(err)
+                 return
+                }
+              })
+  //файл записан успешно
+            ));
